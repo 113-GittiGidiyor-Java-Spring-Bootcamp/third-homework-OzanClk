@@ -50,8 +50,8 @@ public class CourseService implements BaseService<Course> {
         return Optional.of(courseRepository.findByCourseNameContains(containsName));
     }
 
-    public void deleteByFullName(String courseName) {
-        courseRepository.deleteByFullName(courseName);
+    public void deleteByCourseName(String courseName) {
+        courseRepository.deleteByCourseName(courseName);
     }
 
 

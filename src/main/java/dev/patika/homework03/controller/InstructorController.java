@@ -123,7 +123,7 @@ public class InstructorController {
 
     @DeleteMapping("/instructors/{instructorName}")
     public ResponseEntity<String> deleteCourse(@PathVariable String instructorName) {
-        instructorService.deleteByFullName(instructorName);
+        instructorService.deleteByInstructorName(instructorName);
         return new ResponseEntity<>("deleted", HttpStatus.OK);
     }
 

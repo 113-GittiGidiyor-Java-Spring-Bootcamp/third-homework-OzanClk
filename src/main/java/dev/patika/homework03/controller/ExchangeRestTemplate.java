@@ -15,7 +15,7 @@ public class ExchangeRestTemplate {
     @Autowired
     RestTemplate restTemplate;
 
-    @GetMapping
+    @GetMapping("/exchange")
     public ResponseEntity<Double> getExchange() {
 
         ResponseEntity<Double> dollarEquivalent = restTemplate.getForEntity("http://localhost:8081/api/exchange/2000", Double.class);

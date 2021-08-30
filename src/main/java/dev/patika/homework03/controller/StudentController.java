@@ -85,7 +85,7 @@ public class StudentController {
 
     @DeleteMapping("/students/{studentName}")
     public ResponseEntity<String> deleteCourse(@PathVariable String studentName) {
-        studentService.deleteByFullName(studentName);
+        studentService.deleteByStudentName(studentName);
         return new ResponseEntity<>("deleted", HttpStatus.OK);
     }
 

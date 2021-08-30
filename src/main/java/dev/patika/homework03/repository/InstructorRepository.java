@@ -20,7 +20,7 @@ public interface InstructorRepository extends CrudRepository<Instructor, Integer
     @Query(value = "SELECT instructor_name,address,phone_number FROM instructor i INNER JOIN permanent_instructor pi ON  pi.instructor_id=i.id order by monthly_salary asc limit 0,3", nativeQuery = true)
     List<Instructor> findBy3LowesttSalaryInstructors();
 
-    void deleteByFullName(String name);
+    void deleteByInstructorName(String name);
 
 
 }

@@ -14,6 +14,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
@@ -22,13 +23,19 @@ import java.util.List;
 import java.util.Set;
 
 @SpringBootApplication
-@RequiredArgsConstructor
 public class ThirdHomeworkApplication implements CommandLineRunner {
 
     @Bean
     public RestTemplate restTemplateBuilderr(RestTemplateBuilder restTemplateBuilder) {
         return restTemplateBuilder.build();
     }
+
+    public ThirdHomeworkApplication(CourseRepository courseRepository, InstructorRepository instructorRepository, StudentRepository studentRepository) {
+        this.courseRepository = courseRepository;
+        this.instructorRepository = instructorRepository;
+        this.studentRepository = studentRepository;
+    }
+
 
     @Autowired
     private final CourseRepository courseRepository;

@@ -9,7 +9,7 @@ public interface CourseRepository extends CrudRepository<Course, Integer> {
 
     Course findByCourseNameContains(String name);
 
-    void deleteByFullName(String name);
+    void deleteByCourseName(String name);
 
 
 }

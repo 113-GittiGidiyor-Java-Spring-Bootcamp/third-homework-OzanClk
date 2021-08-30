@@ -77,7 +77,7 @@ public class CourseController {
 
     @DeleteMapping("/courses/{courseName}")
     public ResponseEntity<String> deleteCourse(@PathVariable String courseName) {
-        courseService.deleteByFullName(courseName);
+        courseService.deleteByCourseName(courseName);
         return new ResponseEntity<>("deleted", HttpStatus.OK);
     }
 

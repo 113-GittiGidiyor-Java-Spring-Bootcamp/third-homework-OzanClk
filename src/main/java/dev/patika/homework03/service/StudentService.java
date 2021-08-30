@@ -55,8 +55,8 @@ public class StudentService implements BaseService<Student> {
         return studentRepository.getGenderWithGrouping();
     }
 
-    public void deleteByFullName(String instructorName) {
-        studentRepository.deleteByFullName(instructorName);
+    public void deleteByStudentName(String instructorName) {
+        studentRepository.deleteByName(instructorName);
     }
 
 }

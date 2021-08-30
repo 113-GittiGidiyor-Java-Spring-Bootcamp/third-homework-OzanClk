@@ -63,8 +63,8 @@ public class InstructorService implements BaseService<Instructor> {
         return instructorList;
     }
 
-    public void deleteByFullName(String instructorName) {
-        instructorRepository.deleteByFullName(instructorName);
+    public void deleteByInstructorName(String instructorName) {
+        instructorRepository.deleteByInstructorName(instructorName);
     }
 
 }
